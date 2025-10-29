@@ -1,0 +1,36 @@
+# Source files - only ship compiled WASM
+src/
+target/
+Cargo.toml
+Cargo.lock
+
+# Build artifacts
+*.rs
+*.toml
+
+# Tests
+tests/
+benches/
+
+# Documentation source
+*.md.bak
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+.travis.yml
+.circleci/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

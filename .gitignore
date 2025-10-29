@@ -1,0 +1,37 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# WASM
+veil-wasm/pkg/
+*.wasm
+
+# Examples (if added later)
+examples/node_modules/
+examples/dist/
+*.log
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+test_hmac_drbg_c
+test_hmac_drbg_standalone
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*~
