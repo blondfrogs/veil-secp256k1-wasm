@@ -30,7 +30,7 @@ cd ..
 # Build WASM module
 echo -e "${YELLOW}Building WASM module...${NC}"
 cd veil-wasm
-wasm-pack build --target web --release
+wasm-pack build --target nodejs --release
 
 # Extract metadata from workspace Cargo.toml
 VERSION=$(grep -m1 '^version' ../Cargo.toml | cut -d'"' -f2)
