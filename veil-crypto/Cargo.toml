@@ -23,10 +23,6 @@ rand = "0.8"
 getrandom = { version = "0.2", features = ["js"] }  # Required for WASM
 hmac = "0.12"  # For RFC6979-style DRBG in range proofs
 
-# Temporarily keep old deps commented for reference during migration
-# secp256k1.workspace = true
-# secp256k1-sys.workspace = true
-
 [dev-dependencies]
 serde_json.workspace = true
 secp256k1-zkp = "0.11"  # For generating correct test vectors with C library

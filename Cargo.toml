@@ -6,20 +6,16 @@ members = [
 resolver = "2"
 
 [workspace.package]
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
-authors = ["Veil Project"]
+authors = ["Veil Project", "blondfrogs"]
 license = "MIT"
 repository = "https://github.com/blondfrogs/veil-secp256k1-wasm"
 homepage = "https://github.com/blondfrogs/veil-secp256k1-wasm"
 description = "Pure Rust secp256k1 cryptography for Veil blockchain with WASM bindings"
 
 [workspace.dependencies]
-# Crypto dependencies
-secp256k1 = { version = "0.28", features = ["rand", "recovery", "global-context"] }
-# Veil's fork with Pedersen commitments, range proofs, MLSAG, etc.
-# Using exact commit from working analysis directory
-secp256k1-sys = { git = "https://github.com/steel97/rust-secp256k1", rev = "d00182a" }
+# Crypto dependencies (pure Rust, no C bindings)
 sha2 = "0.10"
 sha3 = "0.10"
 hex = "0.4"
