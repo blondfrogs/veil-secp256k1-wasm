@@ -1,14 +1,14 @@
-# @veil/secp256k1-wasm
+# @blondfrogs/secp256k1-wasm
 
 WebAssembly bindings for Veil's pure Rust secp256k1 cryptography library.
 
-[![npm version](https://img.shields.io/npm/v/@veil/secp256k1-wasm.svg)](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+[![npm version](https://img.shields.io/npm/v/@blondfrogs/secp256k1-wasm.svg)](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](../LICENSE)
 [![WASM Size](https://img.shields.io/badge/wasm-530KB-orange.svg)]()
 
 ## Overview
 
-`@veil/secp256k1-wasm` provides JavaScript/TypeScript bindings for the `veil-crypto` Rust library, compiled to WebAssembly. This enables privacy-preserving cryptographic operations in web browsers and Node.js environments.
+`@blondfrogs/secp256k1-wasm` provides JavaScript/TypeScript bindings for the `veil-crypto` Rust library, compiled to WebAssembly. This enables privacy-preserving cryptographic operations in web browsers and Node.js environments.
 
 ## Features
 
@@ -25,13 +25,13 @@ WebAssembly bindings for Veil's pure Rust secp256k1 cryptography library.
 ## Installation
 
 ```bash
-npm install @veil/secp256k1-wasm
+npm install @blondfrogs/secp256k1-wasm
 ```
 
 Or with yarn:
 
 ```bash
-yarn add @veil/secp256k1-wasm
+yarn add @blondfrogs/secp256k1-wasm
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ import init, {
   generate_mlsag,
   derive_pubkey,
   ecdh_veil
-} from '@veil/secp256k1-wasm';
+} from '@blondfrogs/secp256k1-wasm';
 
 // Initialize WASM module (call once at startup)
 await init();
@@ -55,7 +55,7 @@ await init();
 ### Pedersen Commitments
 
 ```typescript
-import { pedersen_commit } from '@veil/secp256k1-wasm';
+import { pedersen_commit } from '@blondfrogs/secp256k1-wasm';
 
 const value = 1000n;  // Amount to commit
 const blind = new Uint8Array(32);  // Blinding factor (use crypto.getRandomValues)
@@ -68,7 +68,7 @@ console.log('Commitment:', commitment);  // 33 bytes
 ### Range Proofs
 
 ```typescript
-import { pedersen_commit, rangeproof_sign, rangeproof_verify } from '@veil/secp256k1-wasm';
+import { pedersen_commit, rangeproof_sign, rangeproof_verify } from '@blondfrogs/secp256k1-wasm';
 
 const value = 1000n;
 const blind = new Uint8Array(32);
@@ -99,7 +99,7 @@ console.log('Valid:', isValid);  // true
 ### MLSAG Ring Signatures
 
 ```typescript
-import { prepare_mlsag, generate_mlsag, verify_mlsag } from '@veil/secp256k1-wasm';
+import { prepare_mlsag, generate_mlsag, verify_mlsag } from '@blondfrogs/secp256k1-wasm';
 
 const message = new Uint8Array(32);  // Message to sign
 const ringSize = 11;
@@ -126,7 +126,7 @@ console.log('Valid MLSAG:', isValid);
 ### Key Derivation
 
 ```typescript
-import { derive_pubkey, ecdh_veil } from '@veil/secp256k1-wasm';
+import { derive_pubkey, ecdh_veil } from '@blondfrogs/secp256k1-wasm';
 
 // Derive public key from private key
 const secretKey = new Uint8Array(32);
@@ -144,7 +144,7 @@ console.log('Shared secret:', sharedSecret);  // 32 bytes
 ### Key Images
 
 ```typescript
-import { generate_keyimage } from '@veil/secp256k1-wasm';
+import { generate_keyimage } from '@blondfrogs/secp256k1-wasm';
 
 const secretKey = new Uint8Array(32);
 crypto.getRandomValues(secretKey);
@@ -315,7 +315,7 @@ MIT License - See [LICENSE](../LICENSE) for details
 
 - **Issues:** [GitHub Issues](https://github.com/blondfrogs/veil-secp256k1-wasm/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/blondfrogs/veil-secp256k1-wasm/discussions)
-- **npm:** [@veil/secp256k1-wasm](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+- **npm:** [@blondfrogs/secp256k1-wasm](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 
 ---
 

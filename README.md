@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
 [![WASM Size](https://img.shields.io/badge/wasm-530KB-orange)]()
 [![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org/)
-[![npm](https://img.shields.io/npm/v/@veil/secp256k1-wasm.svg)](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+[![npm](https://img.shields.io/npm/v/@blondfrogs/secp256k1-wasm.svg)](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 [![crates.io](https://img.shields.io/crates/v/veil-crypto.svg)](https://crates.io/crates/veil-crypto)
 
 **Pure Rust secp256k1 cryptography for Veil blockchain, compiled to WebAssembly.**
@@ -23,11 +23,11 @@ Low-level cryptographic primitives for Veil blockchain privacy features:
 - Validated byte-for-byte against Veil Core
 - Available on [crates.io](https://crates.io/crates/veil-crypto)
 
-### 🌐 npm Package: `@veil/secp256k1-wasm`
+### 🌐 npm Package: `@blondfrogs/secp256k1-wasm`
 - WebAssembly bindings for JavaScript/TypeScript
 - Works in browsers and Node.js
 - 530KB optimized bundle
-- Available on [npm](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+- Available on [npm](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 
 ---
 
@@ -100,11 +100,11 @@ See [veil-crypto README](veil-crypto/README.md) for detailed Rust API documentat
 ### For JavaScript/TypeScript Projects
 
 ```bash
-npm install @veil/secp256k1-wasm
+npm install @blondfrogs/secp256k1-wasm
 ```
 
 ```typescript
-import init, { pedersen_commit, rangeproof_sign } from '@veil/secp256k1-wasm';
+import init, { pedersen_commit, rangeproof_sign } from '@blondfrogs/secp256k1-wasm';
 
 await init();  // Initialize WASM
 
@@ -130,9 +130,9 @@ Pure Rust cryptographic primitives. Use this for:
 
 **[Read veil-crypto documentation →](veil-crypto/README.md)**
 
-### npm Package: `@veil/secp256k1-wasm`
+### npm Package: `@blondfrogs/secp256k1-wasm`
 
-[![npm](https://img.shields.io/npm/v/@veil/secp256k1-wasm.svg)](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+[![npm](https://img.shields.io/npm/v/@blondfrogs/secp256k1-wasm.svg)](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 
 WebAssembly bindings for JavaScript/TypeScript. Use this for:
 - Web applications
@@ -140,7 +140,7 @@ WebAssembly bindings for JavaScript/TypeScript. Use this for:
 - Electron apps
 - React Native (with polyfills)
 
-**[Read @veil/secp256k1-wasm documentation →](veil-wasm/README.md)**
+**[Read @blondfrogs/secp256k1-wasm documentation →](veil-wasm/README.md)**
 
 ---
 
@@ -252,7 +252,7 @@ cargo test
 
 This repository provides **low-level cryptographic primitives**. For building complete Veil transactions, use:
 
-### `@veil/tx-builder` (separate repository)
+### `veil-tx-builder` (separate repository)
 
 High-level TypeScript transaction builder with:
 - Transaction builder class
@@ -263,6 +263,8 @@ High-level TypeScript transaction builder with:
 - Fee calculation
 
 **Coming soon** - Currently being split from this repository into its own package.
+
+Uses `@blondfrogs/secp256k1-wasm` as its cryptographic foundation.
 
 ---
 
@@ -367,7 +369,7 @@ MIT License - See [LICENSE](LICENSE) for details
 - **Issues:** [GitHub Issues](https://github.com/blondfrogs/veil-secp256k1-wasm/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/blondfrogs/veil-secp256k1-wasm/discussions)
 - **Crates.io:** [veil-crypto](https://crates.io/crates/veil-crypto)
-- **npm:** [@veil/secp256k1-wasm](https://www.npmjs.com/package/@veil/secp256k1-wasm)
+- **npm:** [@blondfrogs/secp256k1-wasm](https://www.npmjs.com/package/@blondfrogs/secp256k1-wasm)
 
 ---
 
