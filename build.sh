@@ -32,6 +32,17 @@ echo -e "${YELLOW}Building WASM module...${NC}"
 cd veil-wasm
 wasm-pack build --target web --release
 
+# Get version from workspace Cargo.toml
+VERSION=$(grep -m1 '^version' ../Cargo.toml | cut -d'"' -f2)
+echo -e "${YELLOW}Using version: ${VERSION}${NC}"
+
+# Update package.json with our custom metadata from template
+echo -e "${YELLOW}Updating package.json metadata...${NC}"
+sed "s/{{VERSION}}/${VERSION}/g" package.json.template > pkg/package.json
+
+# Copy README
+cp README.md pkg/
+
 # Check the size
 echo -e "${GREEN}✓ Build complete!${NC}"
 echo ""

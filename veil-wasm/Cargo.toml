@@ -10,6 +10,12 @@ homepage.workspace = true
 keywords = ["veil", "wasm", "cryptography", "secp256k1", "privacy"]
 categories = ["cryptography", "wasm"]
 
+[package.metadata.wasm-pack.profile.release.wasm-bindgen]
+# Don't demangle function names for smaller size
+demangle-name-section = false
+# Don't include DWARF debug info
+dwarf-debug-info = false
+
 [lib]
 crate-type = ["cdylib", "rlib"]
 

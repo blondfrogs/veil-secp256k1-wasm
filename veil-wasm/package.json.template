@@ -1,0 +1,39 @@
+{
+  "name": "@veil/secp256k1-wasm",
+  "type": "module",
+  "version": "{{VERSION}}",
+  "description": "Pure Rust secp256k1 cryptography for Veil blockchain compiled to WebAssembly - includes Pedersen commitments, range proofs, and MLSAG ring signatures",
+  "license": "MIT",
+  "author": "Veil Project",
+  "contributors": [
+    "Veil Project"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blondfrogs/veil-secp256k1-wasm.git"
+  },
+  "homepage": "https://github.com/blondfrogs/veil-secp256k1-wasm",
+  "keywords": [
+    "veil",
+    "secp256k1",
+    "wasm",
+    "webassembly",
+    "cryptography",
+    "ringct",
+    "privacy",
+    "pedersen",
+    "mlsag",
+    "rangeproof"
+  ],
+  "files": [
+    "veil_wasm_bg.wasm",
+    "veil_wasm.js",
+    "veil_wasm.d.ts",
+    "README.md"
+  ],
+  "main": "veil_wasm.js",
+  "types": "veil_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
