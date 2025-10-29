@@ -188,12 +188,15 @@ fn test_mlsag_determinism() {
     let n_rows = 2;  // 1 input + 1 commitment
     let index = 0;
 
-    // Build minimal M matrix
+    // Build minimal M matrix with valid points
+    // Matrix is 2 rows x 2 columns (2x2) = 4 public keys
+    // Row 0 (pubkeys): col0, col1
+    // Row 1 (commitments): col0, col1
     let m = hex::decode(
         "0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798\
          02f9308a019258c31049344f85f89d5229b531c845836f99b08601f113bce036f9\
-         000000000000000000000000000000000000000000000000000000000000000000\
-         000000000000000000000000000000000000000000000000000000000000000000"
+         02c6047f9441ed7d6d3045406e95c07cd85c778e4b8cef3ca7abac09b95c709ee5\
+         0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798"
     ).unwrap();
 
     let sk = hex::decode(
