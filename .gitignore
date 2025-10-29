@@ -8,6 +8,9 @@ Cargo.lock
 veil-wasm/pkg/
 *.wasm
 
+#Environment
+.env
+
 # Examples (if added later)
 examples/node_modules/
 examples/dist/
