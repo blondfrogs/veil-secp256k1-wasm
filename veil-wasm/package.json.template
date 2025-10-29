@@ -1,6 +1,5 @@
 {
   "name": "@blondfrogs/secp256k1-wasm",
-  "type": "module",
   "version": "{{VERSION}}",
   "description": "{{DESCRIPTION}}",
   "license": "{{LICENSE}}",
